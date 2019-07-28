@@ -12,6 +12,7 @@ public class Player_move : MonoBehaviour
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
+        rigid.freezeRotation = true;
         animator = GetComponent<Animator>();
     }
 
