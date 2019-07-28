@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f2fb3feb6c8fbc469706d427a97fff3, type: 3}
   m_Name: Shield
   m_EditorClassIdentifier: 
-  m_AnimatedSprites: []
+  m_AnimatedSprites:
+  - {fileID: 21300000, guid: 1b7d179305ddb6a4dbe082d336bc9e56, type: 3}
+  - {fileID: 21300000, guid: 621627fbb61b8f84ebf180973976ed2e, type: 3}
+  - {fileID: 21300000, guid: eaed5793fca83d042a68e42e03eecbe9, type: 3}
+  - {fileID: 21300000, guid: 904aa7a90ffc3884ca77540f180354bb, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0

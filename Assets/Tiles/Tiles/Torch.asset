@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f2fb3feb6c8fbc469706d427a97fff3, type: 3}
   m_Name: Torch
   m_EditorClassIdentifier: 
-  m_AnimatedSprites: []
-  m_MinSpeed: 1
-  m_MaxSpeed: 1
+  m_AnimatedSprites:
+  - {fileID: 21300000, guid: bb87377d430b8744db4f0d711e007aec, type: 3}
+  - {fileID: 21300000, guid: 441b6b199fceb3246984180121c41be1, type: 3}
+  - {fileID: 21300000, guid: a255fbc5f4e79484cbceadad8ff682b5, type: 3}
+  - {fileID: 21300000, guid: 0fbac16f4c216a94cad9726686e580e2, type: 3}
+  m_MinSpeed: 10
+  m_MaxSpeed: 10
   m_AnimationStartTime: 0
   m_TileColliderType: 0
