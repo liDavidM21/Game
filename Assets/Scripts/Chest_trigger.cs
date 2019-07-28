@@ -17,6 +17,7 @@ public class Chest_trigger : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.gameObject.tag == "Player");
         if (collision.gameObject.tag == "Player")
         {
             animator.SetBool("collided", true);
