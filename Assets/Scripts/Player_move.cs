@@ -5,9 +5,12 @@ using UnityEngine;
 public class Player_move : MonoBehaviour
 {
     public float speed;
+    public float fire_rate;
+    public GameObject bullet;
     private Rigidbody2D rigid;
     private Vector3 change;
     private Animator animator;
+    private float time;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,11 +36,31 @@ public class Player_move : MonoBehaviour
         {
             animator.SetBool("IS_WALKING", false);
         }
+        if (Shoot())
+        {
+            if(Time.time > time)
+            {
+                fire();
+                time = Time.time + fire_rate;
+            }
+        }
     }
 
     //Script to make the character move
     void Character_move()
     {
         rigid.MovePosition(transform.position + change * speed * Time.deltaTime);
+    }
+    bool Shoot()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            return true;
+        }
+        return false;
+    }
+    void fire()
+    {
+        GameObject.Instantiate(bullet, transform.position, Quaternion.identity);
     }
 }
