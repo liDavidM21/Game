@@ -19,6 +19,7 @@ public class Player_move : MonoBehaviour
     void Update()
     {
         change = Vector2.zero;
+        rigid.freezeRotation = true;
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
         if (change != Vector3.zero){
