@@ -5,13 +5,16 @@ using UnityEngine;
 public class Enemy_auto_move : MonoBehaviour
 {
     public float speed;
+    public GameObject ENEMYARROW;
+    int firerate;
     private Rigidbody2D rigid;
     private Vector3 change;
     private Vector3 player_pos;
     public bool is_hit;
-    public int damage;
+    public float damage;
     public int prev_attack = 0;
     public bool attacked = false;
+    public int enemy_health = 100;
     public bool first_attack = true;
     // Start is called before the first frame update
     void Start()
@@ -22,9 +25,11 @@ public class Enemy_auto_move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        is_hit = false;
         if (attacked)
-        {
+        {   
             prev_attack += 1;
+           
         }
         else
         {
@@ -37,41 +42,44 @@ public class Enemy_auto_move : MonoBehaviour
         }
         rigid.freezeRotation = true;
         player_pos = GameObject.Find("character_0").transform.position;
-        if ((player_pos-transform.position).sqrMagnitude <= 40)
+        if ((player_pos - transform.position).sqrMagnitude <= 40)
         {
             change = (player_pos - transform.position).normalized;
             enemy_move();
+            firerate += 1;
+            if (firerate == 60)
+            {
+                fire();
+                firerate = 0;
+            }
+        }
+        if (Mathf.Sqrt(Mathf.Pow((player_pos - transform.position).x,2) + Mathf.Pow((player_pos-transform.position).y, 2)) <= 1.415)
+        {
+            attacked = true;
+            damage = 1;
+            is_hit = true;
         }
     }
-    
+
     //Enemy moving to attack player
     void enemy_move()
     {
         rigid.MovePosition(transform.position + change * speed * Time.deltaTime);
     }
+
+    //Destroy enemy if damaged by bullet
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && able_to_attack())
+        if (collision.gameObject.tag == "bullet")
         {
-            is_hit = true;
-            attacked = true;
-            damage = 2;
-        }
+            enemy_health -= 20;
+            if (enemy_health <= 0){
+                Destroy(this.gameObject);
+            }
+        } 
     }
-    private void OnTriggerExit2D(Collider2D col)
+    private void fire()
     {
-        if (col.gameObject.tag == "Player")
-        {
-            is_hit = false;
-        }
+        GameObject.Instantiate(ENEMYARROW, transform.position, Quaternion.identity);
     }
-    private bool able_to_attack()
-    {
-        if (first_attack)
-        {
-            first_attack = false;
-            return true;
-        }
-        return !attacked;
-    }
-}
+}  

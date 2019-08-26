@@ -18,7 +18,7 @@ public class player_health : MonoBehaviour
         GameObject enemy_hit = GameObject.FindWithTag("enemy");
         if (enemy_hit.GetComponent<Total_damag>().hit)
         {
-            sli.value -= enemy_hit.GetComponent<Total_damag>().damage;
+            sli.value -= enemy_hit.GetComponent<Total_damag>().damage/5;
             enemy_hit.GetComponent<Total_damag>().hit = false;
             enemy_hit.GetComponent<Total_damag>().damage = 0;
         }

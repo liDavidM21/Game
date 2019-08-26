@@ -7,6 +7,8 @@ TagManager:
   - Chest
   - Walls
   - enemy
+  - bullet
+  - easyenemy
   layers:
   - Default
   - TransparentFX

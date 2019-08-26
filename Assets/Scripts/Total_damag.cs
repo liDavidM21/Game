@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Total_damag : MonoBehaviour
 {
-    public int damage = 0;
+    public float damage = 0;
     public bool hit;
     // Start is called before the first frame update
     void Start()
