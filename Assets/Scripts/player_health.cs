@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class player_health : MonoBehaviour
 {
     public Slider sli;
+    public static float damaged = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,8 @@ public class player_health : MonoBehaviour
         GameObject enemy_hit = GameObject.FindWithTag("enemy");
         if (enemy_hit.GetComponent<Total_damag>().hit)
         {
-            sli.value -= enemy_hit.GetComponent<Total_damag>().damage/5;
+            damaged += enemy_hit.GetComponent<Total_damag>().damage / 5;
+            sli.value = 100-damaged;
             enemy_hit.GetComponent<Total_damag>().hit = false;
             enemy_hit.GetComponent<Total_damag>().damage = 0;
         }

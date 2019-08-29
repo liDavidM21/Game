@@ -11,21 +11,23 @@ public class Player_move : MonoBehaviour
     private Vector3 change;
     private Animator animator;
     private float time;
+    private Collider2D collide;
     // Start is called before the first frame update
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
         rigid.freezeRotation = true;
         animator = GetComponent<Animator>();
+        collide = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        change = Vector2.zero;
+        change = Vector3.zero;
         rigid.freezeRotation = true;
         change.x = Input.GetAxisRaw("Horizontal");
-        change.y = Input.GetAxisRaw("Vertical");
+        change.y = Input.GetAxisRaw("Vertical");    
         if (change != Vector3.zero){
             Character_move();
             animator.SetFloat("MOVE_X", change.x);
@@ -45,11 +47,21 @@ public class Player_move : MonoBehaviour
             }
         }
     }
-
-    //Script to make the character move
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Exit")
+        {
+            Debug.Log("hi");
+        }
+    }
+    private void FixedUpdate()
+    {
+        rigid.velocity = new Vector3(0, 0, 0);
+    }
+    //Script to make the character move 
     void Character_move()
     {
-        rigid.MovePosition(transform.position + change * speed * Time.deltaTime);
+        rigid.MovePosition(transform.position + change * speed * Time.fixedDeltaTime);
     }
     bool Shoot()
     {

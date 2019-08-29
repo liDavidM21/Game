@@ -9,6 +9,8 @@ TagManager:
   - enemy
   - bullet
   - easyenemy
+  - Exit
+  - HP
   layers:
   - Default
   - TransparentFX
