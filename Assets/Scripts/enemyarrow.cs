@@ -7,11 +7,16 @@ public class enemyarrow : MonoBehaviour
 {
     public float speed = 10;
     private float angle;
+    private Rigidbody2D rigid;
+    private static Vector3 direction;
     Vector3 playerpos;
     public GameObject total_damag; //I create a reference refering to all enemies, so i can deduct health from there;
     // Start is called before the first frame update
     void Start()
     {
+        playerpos = GameObject.Find("character_0").transform.position;
+        direction = playerpos - transform.position;
+        rigid = GetComponent<Rigidbody2D>();
         total_damag = GameObject.FindWithTag("enemy");
         playerpos.z = -1;
         float angle = AngleBetweenTwoPoints(transform.position, playerpos);
@@ -22,10 +27,8 @@ public class enemyarrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerpos = GameObject.Find("character_0").transform.position;
-        transform.position -= transform.up * speed * Time.deltaTime;
-
-    }
+        rigid.MovePosition(transform.position + (direction * 0.09f));
+    }   
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag != "easyenemy")
