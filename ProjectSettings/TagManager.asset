@@ -11,6 +11,7 @@ TagManager:
   - easyenemy
   - Exit
   - HP
+  - enemy_arrow
   layers:
   - Default
   - TransparentFX
