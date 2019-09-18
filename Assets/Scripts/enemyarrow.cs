@@ -21,7 +21,12 @@ public class enemyarrow : MonoBehaviour
         playerpos.z = -1;
         float angle = AngleBetweenTwoPoints(transform.position, playerpos);
         transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
-        transform.Rotate(new Vector3(0, 0, -90));   
+        transform.Rotate(new Vector3(0, 0, -90));
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("easyenemy");
+        foreach(GameObject i in enemies)
+        {
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), i.GetComponent<Collider2D>());
+        }
     }
 
     // Update is called once per frame
@@ -31,15 +36,12 @@ public class enemyarrow : MonoBehaviour
     }   
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag != "easyenemy")
-        {
-            Destroy(this.gameObject);
-        }
         if(collision.gameObject.tag == "Player")
         {
             player_health.damaged += 5;
             total_damag.GetComponent<Total_damag>().hit = true;
         }
+        Destroy(this.gameObject);
     }
     float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
     {

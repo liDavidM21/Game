@@ -20,7 +20,8 @@ public class Chest_trigger : MonoBehaviour
         Debug.Log(collision.gameObject.tag == "Player");
         if (collision.gameObject.tag == "Player")
         {
-            Weaponchange.avaliable_weapns[1] = true;
+            int i = Random.Range(0, 14);
+            Weaponchange.avaliable_weapns[i] = true;
 
             animator.SetBool("collided", true);
         }
