@@ -28,6 +28,7 @@ public class enemyarrow : MonoBehaviour
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("easyenemy");
         foreach(GameObject i in enemies)
         {
+<<<<<<< HEAD
             Physics2D.IgnoreCollision(i.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         }
     }
@@ -36,6 +37,10 @@ public class enemyarrow : MonoBehaviour
         direction.x = x;
         direction.y = y;
         direction.z = z;
+=======
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), i.GetComponent<Collider2D>());
+        }
+>>>>>>> bccd030aef08387500398822b1b6ff33038db4ab
     }
 
     // Update is called once per frame
@@ -46,16 +51,24 @@ public class enemyarrow : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+<<<<<<< HEAD
         string col_obj = collision.gameObject.tag;
         if (col_obj == "Player")
+=======
+        if(collision.gameObject.tag == "Player")
+>>>>>>> bccd030aef08387500398822b1b6ff33038db4ab
         {
             player_health.damaged += 5;
             total_damag.GetComponent<Total_damag>().hit = true;
         }
+<<<<<<< HEAD
         if (col_obj != "enemy_arrow")
         {
             Destroy(this.gameObject);
         }
+=======
+        Destroy(this.gameObject);
+>>>>>>> bccd030aef08387500398822b1b6ff33038db4ab
     }
     float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
     {
