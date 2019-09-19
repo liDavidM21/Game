@@ -6,6 +6,7 @@ public class Enemy_auto_move : MonoBehaviour
 {
     public float speed = 0.03f;
     public GameObject ENEMYARROW;
+    public enemyarrow arrows;
     int firerate;
     private Rigidbody2D rigid;
     private Vector3 change;
@@ -73,20 +74,75 @@ public class Enemy_auto_move : MonoBehaviour
     {
         rigid.MovePosition(transform.position + (change * speed));
     }
-    
+
     //Destroy enemy if damaged by bullet
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "bullet")
         {
             enemy_health -= 20;
-            if (enemy_health <= 0){
+            if (enemy_health <= 0)
+            {
                 Destroy(this.gameObject);
             }
-        } 
+        }
     }
     private void fire()
     {
-        GameObject.Instantiate(ENEMYARROW, transform.position, Quaternion.identity);
-    }
+        if (gameObject.transform.tag == "easyenemy")
+        {
+            GameObject.Instantiate(ENEMYARROW, transform.position, Quaternion.identity);
+        }
+        else if (gameObject.transform.tag == "shade_attack_enemy")
+        {
+            Vector3 inst_diretion = (GameObject.Find("character_0").transform.position - gameObject.transform.position).normalized;
+            Vector3 tmp = inst_diretion;
+            for (int i = 0; i < 9; i++)
+            {
+                //arrows.AddLast();
+                GameObject arrow = GameObject.Instantiate(ENEMYARROW, transform.position, Quaternion.identity);
+                if (i < 4)
+                {
+                    if (i != 0)
+                    {
+                        inst_diretion.x = Mathf.Cos(Mathf.PI / 9) * inst_diretion.x - Mathf.Sin(Mathf.PI / 9) * inst_diretion.y;
+                        inst_diretion.y = Mathf.Sin(Mathf.PI / 9) * inst_diretion.x + Mathf.Cos(Mathf.PI / 9) * inst_diretion.y;
+                    }
+                }
+                else
+                {
+                    if (i == 4)
+                    {
+                        inst_diretion = (GameObject.Find("character_0").transform.position - gameObject.transform.position).normalized;
+                    }
+                    inst_diretion.x = Mathf.Cos(-Mathf.PI / 9) * inst_diretion.x - Mathf.Sin(-Mathf.PI / 9) * inst_diretion.y;
+                    inst_diretion.y = Mathf.Sin(-Mathf.PI / 9) * inst_diretion.x + Mathf.Cos(-Mathf.PI / 9) * inst_diretion.y;
+                }
+                Vector3 setter;
+                setter.x = inst_diretion.x;
+                setter.y = inst_diretion.y;
+                setter.z = -1;
+                setter = setter.normalized;
+                arrow.GetComponent<enemyarrow>().direction = setter;
+            }
+            //int p = 0;
+            //foreach(GameObject tmp in arrows)
+            //{
+            //    Debug.Log("hi");
+            //    if (tmp != null)
+            //    {
+            //        inst_diretion.x = Mathf.Cos((p + 1) * 20) * inst_diretion.x - Mathf.Sin((p + 1) * 20) * inst_diretion.y;
+            //        inst_diretion.y = Mathf.Sin((p + 1) * 20) * inst_diretion.x - Mathf.Cos((p + 1) * 20) * inst_diretion.y;
+            //        Vector3 setter;
+            //        setter.x = inst_diretion.x;
+            //        setter.y = inst_diretion.y;
+            //        setter.z = -1;
+            //        setter = setter.normalized;
+            //        tmp.GetComponent<enemyarrow>().direction_setter(setter);
+            //        p += 1;
+            //    }
+            //}
+            //arrows = new LinkedList<GameObject>();
+        }
+    }   
 }  
