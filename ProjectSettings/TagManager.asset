@@ -12,6 +12,7 @@ TagManager:
   - Exit
   - HP
   - enemy_arrow
+  - shade_attack_enemy
   layers:
   - Default
   - TransparentFX

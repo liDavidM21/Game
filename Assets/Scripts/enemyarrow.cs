@@ -12,13 +12,12 @@ public class enemyarrow : MonoBehaviour
     Vector3 playerpos;
     public GameObject total_damag; //I create a reference refering to all enemies, so i can deduct health from there;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        Debug.Log("hi");
         playerpos = GameObject.Find("character_0").transform.position;
-        if (direction == Vector3.zero)
-        {
-            direction = (playerpos - transform.position).normalized;
-        }
+        direction = (playerpos - transform.position).normalized;
+        Debug.Log(1);
         rigid = GetComponent<Rigidbody2D>();
         total_damag = GameObject.FindWithTag("enemy");
         playerpos.z = -1;
@@ -26,21 +25,15 @@ public class enemyarrow : MonoBehaviour
         transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
         transform.Rotate(new Vector3(0, 0, -90));
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("easyenemy");
-        foreach(GameObject i in enemies)
+        foreach (GameObject i in enemies)
         {
-<<<<<<< HEAD
-            Physics2D.IgnoreCollision(i.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-        }
-    }
-    void set_direction(float x, float y, float z)
-    {
-        direction.x = x;
-        direction.y = y;
-        direction.z = z;
-=======
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), i.GetComponent<Collider2D>());
         }
->>>>>>> bccd030aef08387500398822b1b6ff33038db4ab
+    }
+    public void direction_setter(Vector3 tmp)
+    {
+        Debug.Log(2);
+        direction = tmp;
     }
 
     // Update is called once per frame
@@ -51,24 +44,17 @@ public class enemyarrow : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-<<<<<<< HEAD
-        string col_obj = collision.gameObject.tag;
-        if (col_obj == "Player")
-=======
-        if(collision.gameObject.tag == "Player")
->>>>>>> bccd030aef08387500398822b1b6ff33038db4ab
+        string col = collision.gameObject.tag;
+        if (col == "Player")
         {
             player_health.damaged += 5;
             total_damag.GetComponent<Total_damag>().hit = true;
         }
-<<<<<<< HEAD
-        if (col_obj != "enemy_arrow")
+        if (col != "enemy_arrow" && col != "bullet")
         {
             Destroy(this.gameObject);
+            
         }
-=======
-        Destroy(this.gameObject);
->>>>>>> bccd030aef08387500398822b1b6ff33038db4ab
     }
     float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
     {
