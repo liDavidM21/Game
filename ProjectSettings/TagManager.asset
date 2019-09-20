@@ -13,6 +13,7 @@ TagManager:
   - HP
   - enemy_arrow
   - shade_attack_enemy
+  - key_counter
   layers:
   - Default
   - TransparentFX

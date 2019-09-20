@@ -125,24 +125,6 @@ public class Enemy_auto_move : MonoBehaviour
                 setter = setter.normalized;
                 arrow.GetComponent<enemyarrow>().direction = setter;
             }
-            //int p = 0;
-            //foreach(GameObject tmp in arrows)
-            //{
-            //    Debug.Log("hi");
-            //    if (tmp != null)
-            //    {
-            //        inst_diretion.x = Mathf.Cos((p + 1) * 20) * inst_diretion.x - Mathf.Sin((p + 1) * 20) * inst_diretion.y;
-            //        inst_diretion.y = Mathf.Sin((p + 1) * 20) * inst_diretion.x - Mathf.Cos((p + 1) * 20) * inst_diretion.y;
-            //        Vector3 setter;
-            //        setter.x = inst_diretion.x;
-            //        setter.y = inst_diretion.y;
-            //        setter.z = -1;
-            //        setter = setter.normalized;
-            //        tmp.GetComponent<enemyarrow>().direction_setter(setter);
-            //        p += 1;
-            //    }
-            //}
-            //arrows = new LinkedList<GameObject>();
         }
     }   
 }  
