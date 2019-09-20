@@ -39,11 +39,10 @@ public class enemyarrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(direction);
-        rigid.MovePosition(transform.position + (direction * 0.09f));
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
+        transform.position -= transform.up * speed * Time.deltaTime;
+    }   
+    private void OnCollisionEnter2D(Collision2D collision)
+    { 
         string col = collision.gameObject.tag;
         if (col == "Player")
         {

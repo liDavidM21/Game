@@ -6,13 +6,12 @@ public class Player_move : MonoBehaviour
 {
     public float speed;
     public float fire_rate;
-    public GameObject bullet;
+    public LinkedList<GameObject> weapons = new LinkedList<GameObject>();
     private GameObject current_weapon;
     private Rigidbody2D rigid;
     private Vector3 change;
     private Animator animator;
     private Collider2D collide;
-    private LinkedList<GameObject> weapons = new LinkedList<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
@@ -92,8 +91,15 @@ public class Player_move : MonoBehaviour
     }
     void swap_weapon(GameObject new_weapon)
     {
-        Destroy(current_weapon);
-        Instantiate(new_weapon, transform.position, Quaternion.identity);
+        current_weapon.SetActive(false);
+        new_weapon.SetActive(true);
         current_weapon = new_weapon;
+    }
+    public void give_weapon(GameObject new_weapon)
+    {
+        GameObject switched_weapon = Instantiate(new_weapon, transform.position, Quaternion.identity);
+        switched_weapon.transform.SetParent(gameObject.transform);
+        weapons.AddLast(switched_weapon);
+        switched_weapon.SetActive(false);
     }
 }

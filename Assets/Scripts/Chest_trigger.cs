@@ -5,6 +5,7 @@ using UnityEngine;
 public class Chest_trigger : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject give_weapon;
     private Animator animator;
     void Start()
     {
@@ -17,13 +18,15 @@ public class Chest_trigger : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.tag == "Player");
-        if (collision.gameObject.tag == "Player")
+        GameObject current_obj = collision.gameObject;
+        if (current_obj.tag == "Player")
         {
-            int i = Random.Range(0, 14);
-            Weaponchange.avaliable_weapns[i] = true;
+            if (!current_obj.GetComponent<Player_move>().weapons.Contains(current_obj))
+            {
+                current_obj.GetComponent<Player_move>().give_weapon(give_weapon);
+                animator.SetBool("collided", true);
+            }
 
-            animator.SetBool("collided", true);
         }
     }
     private void OnTriggerExit2D(Collider2D col)
