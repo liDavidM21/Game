@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class enemyarrow : MonoBehaviour
+public class Stun_arrow : MonoBehaviour
 {
     public float speed = 0.03f;
     private float angle;
@@ -27,6 +26,7 @@ public class enemyarrow : MonoBehaviour
         {
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), i.GetComponent<Collider2D>());
         }
+        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GameObject.FindGameObjectWithTag("stunning_enemy").GetComponent<Collider2D>());
     }
     // Update is called once per frame
     void Update()
@@ -38,10 +38,9 @@ public class enemyarrow : MonoBehaviour
         string col = collision.gameObject.tag;
         if (col == "Player")
         {
-            player_health.damaged += 5;
-            total_damag.GetComponent<Total_damag>().hit = true;
+            Player_move.stunned = true;
             Destroy(this.gameObject);
-            
+
         }
         if (col == "Walls" || col == "Player")
         {

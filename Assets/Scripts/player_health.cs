@@ -17,7 +17,7 @@ public class player_health : MonoBehaviour
     void Update()
     {
         GameObject enemy_hit = GameObject.FindWithTag("enemy");
-        if (enemy_hit.GetComponent<Total_damag>().hit)
+        if (enemy_hit.GetComponent<Total_damag>().hit || flask_hp.healed == true)
         {
             damaged += enemy_hit.GetComponent<Total_damag>().damage / 5;
             sli.value = 100-damaged;

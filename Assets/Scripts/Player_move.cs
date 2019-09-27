@@ -5,12 +5,14 @@ using UnityEngine;
 public class Player_move : MonoBehaviour
 {
     public float speed;
+    public int time_elapsed = 0;
     public float fire_rate;
     public LinkedList<GameObject> weapons = new LinkedList<GameObject>();
     private GameObject current_weapon;
     private Rigidbody2D rigid;
     private Vector3 change;
     private Animator animator;
+    public static bool stunned = false;
     private Collider2D collide;
     // Start is called before the first frame update
     void Start()
@@ -26,34 +28,47 @@ public class Player_move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        change = Vector3.zero;
-        rigid.freezeRotation = true;
-        change.x = Input.GetAxisRaw("Horizontal");
-        change.y = Input.GetAxisRaw("Vertical");
-        if (change != Vector3.zero) {
-            Character_move();
-            animator.SetFloat("MOVE_X", change.x);
-            animator.SetFloat("MOVE_Y", change.y);
-            animator.SetBool("IS_WALKING", true);
-        }
-        else
+        if (!stunned)
         {
-            animator.SetBool("IS_WALKING", false);
-        }
-        if (Shoot())
-        {
-            current_weapon.GetComponent<Weapon>().fire();
-
-        }
-        if (swap())
-        {
-            if(weapons.Find(current_weapon).Next != null)
+            change = Vector3.zero;
+            rigid.freezeRotation = true;
+            change.x = Input.GetAxisRaw("Horizontal");
+            change.y = Input.GetAxisRaw("Vertical");
+            if (change != Vector3.zero)
             {
-                swap_weapon(weapons.Find(current_weapon).Next.Value);
+                Character_move();
+                animator.SetFloat("MOVE_X", change.x);
+                animator.SetFloat("MOVE_Y", change.y);
+                animator.SetBool("IS_WALKING", true);
             }
             else
             {
-                swap_weapon(weapons.First.Value);
+                animator.SetBool("IS_WALKING", false);
+            }
+            if (Shoot())
+            {
+                current_weapon.GetComponent<Weapon>().fire();
+
+            }
+            if (swap())
+            {
+                if (weapons.Find(current_weapon).Next != null)
+                {
+                    swap_weapon(weapons.Find(current_weapon).Next.Value);
+                }
+                else
+                {
+                    swap_weapon(weapons.First.Value);
+                }
+            }
+        }
+        else
+        {
+            time_elapsed += 1;
+            if (time_elapsed >= 40)
+            {
+                time_elapsed = 0;
+                stunned = false;
             }
         }
     }

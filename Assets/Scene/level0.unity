@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 585974434}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -969,6 +969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b97487075a899a849964f358e0d5adc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  give_weapon: {fileID: 0}
 --- !u!1 &888032271 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7164732641015662797, guid: 4c2f10118dec3b441a6d14ea87931065,
@@ -993,7 +994,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 087de2661b6916f42a7550f7e1b3b2be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  num_of_keys: 0
 --- !u!1001 &1020765264
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1506,28 +1506,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0506d29a3e8aa9d42b4e921e95a57a84, type: 3}
---- !u!1 &1429811929 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3602513389428231506, guid: 655e38d9e9be3fd4a9b0edcf0ecba0d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 2010505167}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &1429811933
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429811929}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!4 &1631310720 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2869850840425598790, guid: 0506d29a3e8aa9d42b4e921e95a57a84,
@@ -1545,11 +1523,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy_no_2(stronger weapon)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3602513389428231506, guid: 655e38d9e9be3fd4a9b0edcf0ecba0d5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3602513389428231504, guid: 655e38d9e9be3fd4a9b0edcf0ecba0d5,
         type: 3}
@@ -1607,10 +1580,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1212096515, guid: 655e38d9e9be3fd4a9b0edcf0ecba0d5, type: 3}
-      propertyPath: ENEMYARROW1
-      value: 
-      objectReference: {fileID: 6090221498787794038, guid: 5fa1d843e5d13be478798bf9e35bf869,
-        type: 3}
+      propertyPath: speed
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1212096515, guid: 655e38d9e9be3fd4a9b0edcf0ecba0d5, type: 3}
+      propertyPath: is_hit
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 655e38d9e9be3fd4a9b0edcf0ecba0d5, type: 3}
 --- !u!1 &2088297165

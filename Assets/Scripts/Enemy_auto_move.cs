@@ -6,7 +6,6 @@ public class Enemy_auto_move : MonoBehaviour
 {
     public float speed = 0.03f;
     public GameObject ENEMYARROW;
-    public enemyarrow arrows;
     int firerate;
     private Rigidbody2D rigid;
     private Vector3 change;
@@ -99,7 +98,6 @@ public class Enemy_auto_move : MonoBehaviour
             Vector3 tmp = inst_diretion;
             for (int i = 0; i < 9; i++)
             {
-                //arrows.AddLast();
                 GameObject arrow = GameObject.Instantiate(ENEMYARROW, transform.position, Quaternion.identity);
                 if (i < 4)
                 {
@@ -125,6 +123,11 @@ public class Enemy_auto_move : MonoBehaviour
                 setter = setter.normalized;
                 arrow.GetComponent<enemyarrow>().direction = setter;
             }
+        }
+        else if(gameObject.transform.tag == "stunning_enemy")
+        {
+            GameObject.Instantiate(ENEMYARROW, transform.position, Quaternion.identity);
+
         }
     }   
 }  
