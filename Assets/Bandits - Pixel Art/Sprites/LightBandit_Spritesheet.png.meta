@@ -1,0 +1,836 @@
+fileFormatVersion: 2
+guid: 635e263fa39871745bd59ff1931292bb
+timeCreated: 1513292533
+licenseType: Store
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: LightBandit_Spritesheet_0
+    21300002: LightBandit_Spritesheet_1
+    21300004: LightBandit_Spritesheet_2
+    21300006: LightBandit_Spritesheet_3
+    21300008: LightBandit_Spritesheet_4
+    21300010: LightBandit_Spritesheet_5
+    21300012: LightBandit_Spritesheet_6
+    21300014: LightBandit_Spritesheet_7
+    21300016: LightBandit_Spritesheet_8
+    21300018: LightBandit_Spritesheet_9
+    21300020: LightBandit_Spritesheet_10
+    21300022: LightBandit_Spritesheet_11
+    21300024: LightBandit_Spritesheet_12
+    21300026: LightBandit_Spritesheet_13
+    21300028: LightBandit_Spritesheet_14
+    21300030: LightBandit_Spritesheet_15
+    21300032: LightBandit_Spritesheet_16
+    21300034: LightBandit_Spritesheet_17
+    21300036: LightBandit_Spritesheet_18
+    21300038: LightBandit_Spritesheet_19
+    21300040: LightBandit_Spritesheet_20
+    21300042: LightBandit_Spritesheet_21
+    21300044: LightBandit_Spritesheet_22
+    21300046: LightBandit_Spritesheet_23
+    21300048: LightBandit_Spritesheet_24
+    21300050: LightBandit_Spritesheet_25
+    21300052: LightBandit_Spritesheet_26
+    21300054: LightBandit_Spritesheet_27
+    21300056: LightBandit_Spritesheet_28
+    21300058: LightBandit_Spritesheet_29
+    21300060: LightBandit_Spritesheet_30
+    21300062: LightBandit_Spritesheet_31
+    21300064: LightBandit_Spritesheet_32
+    21300066: LightBandit_Spritesheet_33
+    21300068: LightBandit_Spritesheet_34
+    21300070: LightBandit_Spritesheet_35
+    21300072: LightBandit_Spritesheet_36
+    21300074: LightBandit_Spritesheet_37
+    21300076: LightBandit_Spritesheet_38
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: LightBandit_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 41}
+        - {x: -1, y: 41}
+        - {x: -5, y: 39}
+        - {x: -10, y: 6}
+        - {x: -10, y: 0}
+        - {x: 12, y: 0}
+        - {x: 20, y: 21}
+        - {x: 20, y: 25}
+        - {x: 18, y: 27}
+    - name: LightBandit_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 288
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: 41}
+        - {x: -4, y: 41}
+        - {x: -10, y: 16}
+        - {x: -10, y: 0}
+        - {x: 12, y: 0}
+        - {x: 14, y: 2}
+        - {x: 20, y: 15}
+        - {x: 20, y: 28}
+    - name: LightBandit_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 40}
+        - {x: -4, y: 40}
+        - {x: -10, y: 16}
+        - {x: -10, y: 0}
+        - {x: 14, y: 0}
+        - {x: 20, y: 13}
+        - {x: 20, y: 26}
+        - {x: 8, y: 39}
+    - name: LightBandit_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 288
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 40}
+        - {x: -1, y: 40}
+        - {x: -5, y: 38}
+        - {x: -10, y: 8}
+        - {x: -10, y: 0}
+        - {x: 14, y: 0}
+        - {x: 20, y: 12}
+        - {x: 20, y: 26}
+    - name: LightBandit_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 39}
+        - {x: -19, y: 34}
+        - {x: -19, y: 17}
+        - {x: -17, y: 0}
+        - {x: 18, y: 0}
+        - {x: 18, y: 14}
+        - {x: 10, y: 39}
+    - name: LightBandit_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 288
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 39}
+        - {x: -19, y: 7}
+        - {x: -18, y: 0}
+        - {x: 18, y: 0}
+        - {x: 18, y: 39}
+    - name: LightBandit_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: 38}
+        - {x: -4, y: 35}
+        - {x: -19, y: 34}
+        - {x: -19, y: 0}
+        - {x: 18, y: 0}
+        - {x: 18, y: 12}
+        - {x: 10, y: 38}
+    - name: LightBandit_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 288
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 38}
+        - {x: -19, y: 36}
+        - {x: -19, y: 0}
+        - {x: 18, y: 0}
+        - {x: 18, y: 12}
+        - {x: 10, y: 38}
+    - name: LightBandit_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 37}
+        - {x: -8, y: 36}
+        - {x: -10, y: 26}
+        - {x: -10, y: 14}
+        - {x: -4, y: 1}
+        - {x: 0, y: 0}
+        - {x: 17, y: 0}
+        - {x: 19, y: 5}
+        - {x: 19, y: 32}
+        - {x: 13, y: 37}
+    - name: LightBandit_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 240
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 38}
+        - {x: -14, y: 32}
+        - {x: -14, y: 14}
+        - {x: -9, y: 1}
+        - {x: 19, y: 1}
+        - {x: 19, y: 32}
+        - {x: 6, y: 38}
+    - name: LightBandit_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 240
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: 30}
+        - {x: 17, y: 30}
+        - {x: 1, y: 39}
+        - {x: -6, y: 39}
+        - {x: -15, y: 32}
+        - {x: -15, y: 3}
+        - {x: -14, y: 0}
+        - {x: 2, y: 0}
+        - {x: 4, y: 1}
+        - {x: 20, y: 8}
+        - {x: 21, y: 26}
+        - {x: 21, y: 28}
+    - name: LightBandit_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 240
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17, y: 30}
+        - {x: 6, y: 37}
+        - {x: 3, y: 38}
+        - {x: -6, y: 38}
+        - {x: -10, y: 34}
+        - {x: -10, y: 0}
+        - {x: 12, y: 0}
+        - {x: 19, y: 14}
+        - {x: 19, y: 28}
+    - name: LightBandit_Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 240
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 37}
+        - {x: -7, y: 33}
+        - {x: -7, y: 0}
+        - {x: 13, y: 0}
+        - {x: 17, y: 1}
+        - {x: 17, y: 32}
+        - {x: 4, y: 37}
+    - name: LightBandit_Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 240
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 38}
+        - {x: -9, y: 37}
+        - {x: -17, y: 19}
+        - {x: -16, y: 16}
+        - {x: -3, y: 2}
+        - {x: 16, y: 2}
+        - {x: 18, y: 6}
+        - {x: 18, y: 25}
+        - {x: 7, y: 38}
+    - name: LightBandit_Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 240
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 39}
+        - {x: -18, y: 25}
+        - {x: -18, y: 13}
+        - {x: -14, y: 0}
+        - {x: 4, y: 0}
+        - {x: 17, y: 4}
+        - {x: 17, y: 28}
+        - {x: 3, y: 39}
+    - name: LightBandit_Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 240
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 38}
+        - {x: 2, y: 39}
+        - {x: -6, y: 39}
+        - {x: -8, y: 37}
+        - {x: -17, y: 20}
+        - {x: -16, y: 17}
+        - {x: -12, y: 16}
+        - {x: -8, y: 1}
+        - {x: -4, y: 0}
+        - {x: 5, y: 0}
+        - {x: 16, y: 8}
+        - {x: 18, y: 14}
+        - {x: 18, y: 25}
+    - name: LightBandit_Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 48}
+        - {x: -12, y: 48}
+        - {x: -12, y: 0}
+        - {x: 16, y: 0}
+        - {x: 16, y: 32}
+        - {x: 12, y: 43}
+    - name: LightBandit_Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 48}
+        - {x: -11, y: 47}
+        - {x: -13, y: 12}
+        - {x: -13, y: 2}
+        - {x: -10, y: 0}
+        - {x: 16, y: 0}
+        - {x: 16, y: 36}
+        - {x: 0, y: 48}
+    - name: LightBandit_Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 48}
+        - {x: -13, y: 39}
+        - {x: -13, y: 0}
+        - {x: 16, y: 0}
+        - {x: 16, y: 33}
+        - {x: -1, y: 48}
+    - name: LightBandit_Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 192
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 48}
+        - {x: -13, y: 0}
+        - {x: 15, y: 0}
+        - {x: 15, y: 34}
+        - {x: -2, y: 48}
+    - name: LightBandit_Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 48}
+        - {x: -20, y: 46}
+        - {x: -24, y: 35}
+        - {x: -24, y: 17}
+        - {x: -17, y: 0}
+        - {x: 18, y: 0}
+        - {x: 18, y: 41}
+        - {x: 16, y: 48}
+    - name: LightBandit_Spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 192
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 48}
+        - {x: -22, y: 38}
+        - {x: -22, y: 22}
+        - {x: -14, y: 0}
+        - {x: 18, y: 0}
+        - {x: 18, y: 27}
+        - {x: 14, y: 48}
+    - name: LightBandit_Spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1, y: 48}
+        - {x: -12, y: 42}
+        - {x: -18, y: 35}
+        - {x: -19, y: 31}
+        - {x: -17, y: 29}
+        - {x: -14, y: 0}
+        - {x: 18, y: 0}
+        - {x: 18, y: 48}
+    - name: LightBandit_Spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 192
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 48}
+        - {x: -7, y: 36}
+        - {x: -10, y: 31}
+        - {x: -10, y: 0}
+        - {x: 18, y: 0}
+        - {x: 18, y: 47}
+        - {x: 17, y: 48}
+    - name: LightBandit_Spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 16}
+        - {x: -20, y: 1}
+        - {x: -19, y: 0}
+        - {x: 22, y: 0}
+        - {x: 23, y: 2}
+        - {x: 23, y: 16}
+    - name: LightBandit_Spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7, y: 26}
+        - {x: -4, y: 22}
+        - {x: -17, y: 13}
+        - {x: -17, y: 0}
+        - {x: 22, y: 0}
+        - {x: 22, y: 8}
+        - {x: 14, y: 26}
+    - name: LightBandit_Spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 35}
+        - {x: 6, y: 35}
+        - {x: -10, y: 24}
+        - {x: -14, y: 4}
+        - {x: -14, y: 2}
+        - {x: -12, y: 0}
+        - {x: 14, y: 0}
+        - {x: 17, y: 3}
+        - {x: 17, y: 27}
+    - name: LightBandit_Spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 35}
+        - {x: 1, y: 35}
+        - {x: -13, y: 24}
+        - {x: -13, y: 0}
+        - {x: 17, y: 0}
+        - {x: 17, y: 18}
+        - {x: 15, y: 33}
+    - name: LightBandit_Spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 35}
+        - {x: 2, y: 35}
+        - {x: -13, y: 24}
+        - {x: -13, y: 0}
+        - {x: 17, y: 0}
+        - {x: 17, y: 18}
+        - {x: 15, y: 33}
+    - name: LightBandit_Spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 144
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 35}
+        - {x: 5, y: 35}
+        - {x: -7, y: 27}
+        - {x: -13, y: 18}
+        - {x: -13, y: 0}
+        - {x: 16, y: 0}
+        - {x: 17, y: 3}
+        - {x: 17, y: 27}
+    - name: LightBandit_Spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 144
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 35}
+        - {x: 8, y: 35}
+        - {x: -7, y: 27}
+        - {x: -13, y: 18}
+        - {x: -13, y: 0}
+        - {x: 16, y: 0}
+        - {x: 17, y: 3}
+        - {x: 17, y: 18}
+        - {x: 15, y: 34}
+    - name: LightBandit_Spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 144
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 37}
+        - {x: -6, y: 37}
+        - {x: -11, y: 26}
+        - {x: -11, y: 0}
+        - {x: 14, y: 0}
+        - {x: 16, y: 3}
+        - {x: 16, y: 34}
+    - name: LightBandit_Spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 38}
+        - {x: 3, y: 38}
+        - {x: -11, y: 22}
+        - {x: -12, y: 17}
+        - {x: -12, y: 0}
+        - {x: 11, y: 0}
+        - {x: 18, y: 20}
+        - {x: 18, y: 27}
+        - {x: 16, y: 35}
+    - name: LightBandit_Spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: 41}
+        - {x: 3, y: 41}
+        - {x: -7, y: 29}
+        - {x: -7, y: 0}
+        - {x: 10, y: 0}
+        - {x: 13, y: 4}
+        - {x: 17, y: 15}
+        - {x: 17, y: 28}
+    - name: LightBandit_Spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7, y: 41}
+        - {x: 4, y: 41}
+        - {x: 2, y: 39}
+        - {x: -2, y: 41}
+        - {x: -5, y: 41}
+        - {x: -7, y: 39}
+        - {x: -7, y: 17}
+        - {x: -4, y: 11}
+        - {x: 3, y: 0}
+        - {x: 8, y: 0}
+        - {x: 15, y: 2}
+        - {x: 17, y: 10}
+        - {x: 17, y: 22}
+        - {x: 13, y: 37}
+    - name: LightBandit_Spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 20}
+        - {x: 6, y: 22}
+        - {x: -20, y: 22}
+        - {x: -20, y: 5}
+        - {x: -16, y: 2}
+        - {x: -5, y: 0}
+        - {x: 13, y: 0}
+        - {x: 18, y: 2}
+        - {x: 21, y: 6}
+        - {x: 21, y: 13}
+    - name: LightBandit_Spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 22}
+        - {x: -20, y: 0}
+        - {x: 9, y: 0}
+        - {x: 21, y: 9}
+        - {x: 21, y: 22}
+    - name: LightBandit_Spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 96
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1, y: 41}
+        - {x: -4, y: 38}
+        - {x: -10, y: 27}
+        - {x: -10, y: 12}
+        - {x: -1, y: 0}
+        - {x: 12, y: 0}
+        - {x: 18, y: 15}
+        - {x: 18, y: 32}
+        - {x: 9, y: 41}
+    - name: LightBandit_Spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 12}
+        - {x: -17, y: 12}
+        - {x: -23, y: 5}
+        - {x: -23, y: 2}
+        - {x: -22, y: 0}
+        - {x: 24, y: 0}
+        - {x: 24, y: 5}
+        - {x: 22, y: 11}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
