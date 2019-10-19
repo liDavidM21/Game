@@ -10,11 +10,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mouse_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mouse_pos.z = -1;
-        float angle = AngleBetweenTwoPoints(transform.position, mouse_pos);
-        transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
-        transform.Rotate(new Vector3(0, 0, -90));
+        initial_position();
     }
 
     // Update is called once per frame
@@ -23,9 +19,17 @@ public class Bullet : MonoBehaviour
         transform.position -= transform.up * speed * Time.deltaTime;
 
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    public virtual void initial_position()
     {
-        if (collision.gameObject.tag != "Player" &&collision.gameObject.tag != "enemy_arrow")
+        mouse_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mouse_pos.z = -1;
+        float angle = AngleBetweenTwoPoints(transform.position, mouse_pos);
+        transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+        transform.Rotate(new Vector3(0, 0, -90));
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag != "Player" && collision.gameObject.tag != "enemy_arrow" && collision.gameObject.tag != "bullet")
         {
             Destroy(this.gameObject);
         }

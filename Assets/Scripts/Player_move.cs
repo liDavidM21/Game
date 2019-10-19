@@ -46,11 +46,6 @@ public class Player_move : MonoBehaviour
             {
                 animator.SetBool("IS_WALKING", false);
             }
-            if (Shoot())
-            {
-                current_weapon.GetComponent<Weapon>().fire();
-
-            }
             if (swap())
             {
                 if (weapons.Find(current_weapon).Next != null)
@@ -88,14 +83,6 @@ public class Player_move : MonoBehaviour
     void Character_move()
     {
         rigid.MovePosition(transform.position + change * speed * Time.fixedDeltaTime);
-    }
-    bool Shoot()
-    {
-        if (Input.GetMouseButton(0))
-        {
-            return true;
-        }
-        return false;
     }
     bool swap()
     {
